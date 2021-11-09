@@ -6,7 +6,20 @@ using System.Threading.Tasks;
 
 namespace DoAnOOP
 {
-    class LoaiSach
+    public class LoaiSach
     {
+        public string MaLoaiSach { get; set; }
+        public string TheLoai { get; set; }
+
+        public LoaiSach(string MaLoaiSach,string TheLoai)
+        {
+            this.MaLoaiSach = MaLoaiSach;
+            this.TheLoai = TheLoai;
+        }
+        public LoaiSach(LoaiSach Loai)
+        {
+            this.MaLoaiSach = Loai.MaLoaiSach;
+            this.TheLoai = Loai.TheLoai;
+        }
     }
 }
