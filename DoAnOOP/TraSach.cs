@@ -11,21 +11,21 @@ namespace DoAnOOP
         public ChiTietPhieuMuon chitiet { get; set; }
         public Sach MSSach { get; set; }
         public NhanVien MSNV { get; set; }
-        public DateTime ngayMuon { get; set; }
+        public DateTime ngayTra { get; set; }
 
-        public TraSach(ChiTietPhieuMuon chitiet, Sach MSSach, NhanVien MSNV, DateTime ngayMuon)
+        public TraSach(ChiTietPhieuMuon chitiet, Sach MSSach, NhanVien MSNV, DateTime ngayTra)
         {
             this.chitiet = chitiet;
             this.MSSach = MSSach;
             this.MSNV = MSNV;
-            this.ngayMuon = ngayMuon;
+            this.ngayTra = ngayTra;
         }
         public TraSach(TraSach traSach)
         {
             this.chitiet = traSach.chitiet;
             this.MSSach = traSach.MSSach;
             this.MSNV = traSach.MSNV;
-            this.ngayMuon = traSach.ngayMuon;
+            this.ngayTra = traSach.ngayTra;
         }
     }
 }

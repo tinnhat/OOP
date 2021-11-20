@@ -1,0 +1,7 @@
+E:\oop\DoAnOOP\DoAnOOP\bin\Debug\DoAnOOP.exe.config
+E:\oop\DoAnOOP\DoAnOOP\bin\Debug\DoAnOOP.exe
+E:\oop\DoAnOOP\DoAnOOP\bin\Debug\DoAnOOP.pdb
+E:\oop\DoAnOOP\DoAnOOP\obj\Debug\DoAnOOP.csproj.AssemblyReference.cache
+E:\oop\DoAnOOP\DoAnOOP\obj\Debug\DoAnOOP.csproj.CoreCompileInputs.cache
+E:\oop\DoAnOOP\DoAnOOP\obj\Debug\DoAnOOP.exe
+E:\oop\DoAnOOP\DoAnOOP\obj\Debug\DoAnOOP.pdb
