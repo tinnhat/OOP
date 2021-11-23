@@ -185,7 +185,7 @@ namespace DoAnOOP
                             Convert.ToString(x.ngayMuon.Year) == "2021"
                           group x by new
                           {
-                              thang = (int?)x.ngayMuon.Month
+                              thang = (int)x.ngayMuon.Month
                           } into g
                           where g.Count(p => p.MSDG != null) >=
                               ((from x2 in muonSach
@@ -193,7 +193,7 @@ namespace DoAnOOP
                                  Convert.ToString(x2.ngayMuon.Year) == "2021"
                                 group x2 by new
                                 {
-                                    thang = (int?)x2.ngayMuon.Month
+                                    thang = (int)x2.ngayMuon.Month
                                 } into f
                                 select new
                                 {
@@ -239,8 +239,7 @@ namespace DoAnOOP
         public static void cau17()
         {
             var results = from x in docGia
-                          where
-                            !(from p in muonSach
+                          where!(from p in muonSach
                                select new
                                {
                                    p.MSDG.MSDG
@@ -285,7 +284,7 @@ namespace DoAnOOP
                             Convert.ToString(A.ngayMuon.Year) == "2021"
                           group new { A, A.MSDG.HoTen } by new
                           {
-                              thang = (int?)A.ngayMuon.Month,
+                              thang = (int)A.ngayMuon.Month,
                               A.MSDG.HoTen
                           } into g
                           select new
