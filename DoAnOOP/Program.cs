@@ -217,7 +217,7 @@ namespace DoAnOOP
                 Console.WriteLine("Ten sach: " + r.tenSach + "\t\tTen NXB: " + r.tenNXB + "\tTen tac gia: " + r.tenTG);
             }
             Console.WriteLine("=========================================================================================================");
-            //10.cho biết thông tin độc giả đầu tiên ở Hồ Chí Minh
+            //10.cho biết thông tin độc giả cuối cùng ở Hồ Chí Minh
             Console.WriteLine("10.cho biet ten doc gia cuoi cung o Ho Chi Minh\n");
             var resultLast = (from p in docGia
                               where p.DiaChi=="Ho Chi Minh" select p).Last();
