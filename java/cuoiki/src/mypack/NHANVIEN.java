@@ -1,67 +1,36 @@
 package mypack;
 
-import java.util.Date;
+import java.sql.Date;
 
-public class NHANVIEN {
-	public String MSNV;
-	public String HoTenNV;
-	public String DiaChi;
-	public Date NgaySinh;
-	public boolean GioiTinh;
-	public String SDT;
-	public String Email;
-	public NHANVIEN(String mSNV, String hoTenNV, String diaChi, Date ngaySinh, boolean gioiTinh, String sDT,
-			String email) {
-		super();
-		MSNV = mSNV;
-		HoTenNV = hoTenNV;
-		DiaChi = diaChi;
-		NgaySinh = ngaySinh;
-		GioiTinh = gioiTinh;
-		SDT = sDT;
-		Email = email;
-	}
-	public String getMSNV() {
-		return MSNV;
-	}
-	public void setMSNV(String mSNV) {
-		MSNV = mSNV;
-	}
-	public String getHoTenNV() {
-		return HoTenNV;
-	}
-	public void setHoTenNV(String hoTenNV) {
-		HoTenNV = hoTenNV;
-	}
-	public String getDiaChi() {
-		return DiaChi;
-	}
-	public void setDiaChi(String diaChi) {
-		DiaChi = diaChi;
-	}
-	public Date getNgaySinh() {
-		return NgaySinh;
-	}
-	public void setNgaySinh(Date ngaySinh) {
-		NgaySinh = ngaySinh;
-	}
-	public boolean isGioiTinh() {
-		return GioiTinh;
-	}
-	public void setGioiTinh(boolean gioiTinh) {
-		GioiTinh = gioiTinh;
-	}
-	public String getSDT() {
-		return SDT;
-	}
-	public void setSDT(String sDT) {
-		SDT = sDT;
-	}
-	public String getEmail() {
-		return Email;
-	}
-	public void setEmail(String email) {
-		Email = email;
-	}
-	
+public class NhanVien {
+
+    public String MSNV; 
+    public String HoTenNV;
+    public String DiaChi; 
+    public Date NgaySinh;
+    public boolean GioiTinh;
+    public String SDT; 
+    public String Email;
+    
+  
+    public NhanVien(String MSNV, String HoTenNV, String DiaChi, Date NgaySinh, boolean GioiTinh, String SDT, String Email)
+    {
+        this.MSNV = MSNV;
+        this.HoTenNV = HoTenNV;
+        this.DiaChi = DiaChi;
+        this.NgaySinh = NgaySinh;
+        this.GioiTinh = GioiTinh;
+        this.SDT = SDT;
+        this.Email = Email;
+    }
+    public NhanVien(NhanVien nv)
+    {
+        this.MSNV = nv.MSNV;
+        this.HoTenNV = nv.HoTenNV;
+        this.DiaChi = nv.DiaChi;
+        this.NgaySinh = nv.NgaySinh;
+        this.GioiTinh = nv.GioiTinh;
+        this.SDT = nv.SDT;
+        this.Email = nv.Email;
+    }
 }

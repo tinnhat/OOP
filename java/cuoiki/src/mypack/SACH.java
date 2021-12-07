@@ -1,31 +1,49 @@
 package mypack;
 
-public class SACH {
-	public String MMSach;
-	public String TenSach;
-	public String NamXB;
-	public int LanXB;
-	public int SoLuong;
-	public LOAISACH loaisach;
-	public TACGIA tacgia;
-	public NXB nxb;
-	public SACH(String mMSach, String tenSach, String namXB, int lanXB, int soLuong, LOAISACH loaisach, TACGIA tacgia,
-			NXB nxb) {
-		super();
-		MMSach = mMSach;
-		TenSach = tenSach;
-		NamXB = namXB;
-		LanXB = lanXB;
-		SoLuong = soLuong;
-		this.loaisach = loaisach;
-		this.tacgia = tacgia;
-		this.nxb = nxb;
+public class Sach {
+
+	   public String MSSACH;
+       public String TenSach; 
+       public String NamXB;
+       public int LanXB;
+       public int SoLuong;
+       public LoaiSach loaiSach ;
+       public TacGia tacGia ;
+       public NXB nxb ;
+       
+   public Sach(String MSSACH, String TenSach, String NamXB, int LanXB, int SoLuong, LoaiSach loaiSach, TacGia tacGia, NXB nxb)
+   {
+           this.MSSACH = MSSACH;
+           this.TenSach = TenSach;
+           this.NamXB = NamXB;
+           this.LanXB = LanXB;
+           this.SoLuong = SoLuong;
+           this.loaiSach = loaiSach;
+           this.tacGia = tacGia;
+           this.nxb = nxb;
+   }
+   public Sach(Sach sach)
+   {
+           MSSACH = sach.MSSACH;
+           TenSach = sach.TenSach;
+           NamXB = sach.NamXB;
+           LanXB = sach.LanXB;
+           SoLuong = sach.SoLuong;
+           loaiSach = sach.loaiSach;
+           tacGia = sach.tacGia;
+           nxb = sach.nxb;
+   }
+   public Sach()
+   {
+       
+   }
+       
+       
+	public String getMSSACH() {
+		return MSSACH;
 	}
-	public String getMMSach() {
-		return MMSach;
-	}
-	public void setMMSach(String mMSach) {
-		MMSach = mMSach;
+	public void setMSSACH(String mSSACH) {
+		MSSACH = mSSACH;
 	}
 	public String getTenSach() {
 		return TenSach;
@@ -51,17 +69,17 @@ public class SACH {
 	public void setSoLuong(int soLuong) {
 		SoLuong = soLuong;
 	}
-	public LOAISACH getLoaisach() {
-		return loaisach;
+	public LoaiSach getLoaiSach() {
+		return loaiSach;
 	}
-	public void setLoaisach(LOAISACH loaisach) {
-		this.loaisach = loaisach;
+	public void setLoaiSach(LoaiSach loaiSach) {
+		this.loaiSach = loaiSach;
 	}
-	public TACGIA getTacgia() {
-		return tacgia;
+	public TacGia getTacGia() {
+		return tacGia;
 	}
-	public void setTacgia(TACGIA tacgia) {
-		this.tacgia = tacgia;
+	public void setTacGia(TacGia tacGia) {
+		this.tacGia = tacGia;
 	}
 	public NXB getNxb() {
 		return nxb;
@@ -69,6 +87,6 @@ public class SACH {
 	public void setNxb(NXB nxb) {
 		this.nxb = nxb;
 	}
-	
-	
+       
+       
 }

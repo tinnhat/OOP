@@ -5,3 +5,10 @@ E:\oop\DoAnOOP\DoAnOOP\obj\Debug\DoAnOOP.csproj.AssemblyReference.cache
 E:\oop\DoAnOOP\DoAnOOP\obj\Debug\DoAnOOP.csproj.CoreCompileInputs.cache
 E:\oop\DoAnOOP\DoAnOOP\obj\Debug\DoAnOOP.exe
 E:\oop\DoAnOOP\DoAnOOP\obj\Debug\DoAnOOP.pdb
+D:\BH C#\Class OOP\Project cuoi ky github\FINAL\OOP\DoAnOOP\bin\Debug\DoAnOOP.exe.config
+D:\BH C#\Class OOP\Project cuoi ky github\FINAL\OOP\DoAnOOP\bin\Debug\DoAnOOP.exe
+D:\BH C#\Class OOP\Project cuoi ky github\FINAL\OOP\DoAnOOP\bin\Debug\DoAnOOP.pdb
+D:\BH C#\Class OOP\Project cuoi ky github\FINAL\OOP\DoAnOOP\obj\Debug\DoAnOOP.csproj.AssemblyReference.cache
+D:\BH C#\Class OOP\Project cuoi ky github\FINAL\OOP\DoAnOOP\obj\Debug\DoAnOOP.csproj.CoreCompileInputs.cache
+D:\BH C#\Class OOP\Project cuoi ky github\FINAL\OOP\DoAnOOP\obj\Debug\DoAnOOP.exe
+D:\BH C#\Class OOP\Project cuoi ky github\FINAL\OOP\DoAnOOP\obj\Debug\DoAnOOP.pdb

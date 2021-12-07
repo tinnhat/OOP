@@ -1,28 +1,37 @@
 package mypack;
 
-import java.util.Date;
+import java.sql.Date;
 
-public class CHITIETPHIEUMUON {
-	public String SoPhieuMuon;
-	public String MSSach;
-	public Date HanTra;
-	public CHITIETPHIEUMUON(String soPhieuMuon, String mSSach, Date hanTra) {
-		super();
-		SoPhieuMuon = soPhieuMuon;
-		MSSach = mSSach;
-		HanTra = hanTra;
-	}
+public class ChiTietPhieuMuon {
+
+    public String SoPhieuMuon;
+    public String MSSACH;
+    public Date HanTra;
+    
+    public ChiTietPhieuMuon(String SoPhieuMuon, String MSSACH, Date HanTra)
+    {
+        this.SoPhieuMuon = SoPhieuMuon;
+        this.MSSACH = MSSACH;
+        this.HanTra = HanTra;
+    }
+    public ChiTietPhieuMuon(ChiTietPhieuMuon phieu)
+    {
+        this.SoPhieuMuon = phieu.SoPhieuMuon;
+        this.MSSACH = phieu.MSSACH;
+        this.HanTra = phieu.HanTra;
+    }
+    
 	public String getSoPhieuMuon() {
 		return SoPhieuMuon;
 	}
 	public void setSoPhieuMuon(String soPhieuMuon) {
 		SoPhieuMuon = soPhieuMuon;
 	}
-	public String getMSSach() {
-		return MSSach;
+	public String getMSSACH() {
+		return MSSACH;
 	}
-	public void setMSSach(String mSSach) {
-		MSSach = mSSach;
+	public void setMSSACH(String mSSACH) {
+		MSSACH = mSSACH;
 	}
 	public Date getHanTra() {
 		return HanTra;
@@ -30,5 +39,7 @@ public class CHITIETPHIEUMUON {
 	public void setHanTra(Date hanTra) {
 		HanTra = hanTra;
 	}
-	
+    
+    
+
 }

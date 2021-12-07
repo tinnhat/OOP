@@ -1,24 +1,38 @@
 package mypack;
 
-import java.util.Date;
+import java.sql.Date;
 
-public class DOCGIA {
-	public String MSDG;
-	public String HoTen;
-	public String DiaChi;
-	public Date NgaySinh;
-	public boolean GioiTinh;
-	public String email;
-	public DOCGIA(String mSDG, String hoTen, String diaChi, Date ngaySinh, boolean gioiTinh, String email) {
-		super();
-		MSDG = mSDG;
-		HoTen = hoTen;
-		DiaChi = diaChi;
-		NgaySinh = ngaySinh;
-		GioiTinh = gioiTinh;
-		this.email = email;
-	}
-	
+public class DocGia {
+
+	   public String MSDG;
+       public String HoTen;
+       public String DiaChi;
+
+       public Date NgaySinh;
+       public boolean GioiTinh;
+       public String Email;
+       
+       public DocGia(String MSDG, String HoTen, String DiaChi, Date NgaySinh, boolean GioiTinh, String Email)
+       {
+           this.MSDG = MSDG;
+           this.HoTen = HoTen;
+           this.DiaChi = DiaChi;
+           this.NgaySinh = NgaySinh;
+           this.GioiTinh = GioiTinh;
+           this.Email = Email;
+       }
+       public DocGia(DocGia dg)
+       {
+           this.MSDG = dg.MSDG;
+           this.HoTen = dg.HoTen;
+           this.DiaChi = dg.DiaChi;
+           this.NgaySinh = dg.NgaySinh;
+           this.GioiTinh = dg.GioiTinh;
+           this.Email = dg.Email;
+       }
+       
+       
+       
 	public String getMSDG() {
 		return MSDG;
 	}
@@ -50,11 +64,12 @@ public class DOCGIA {
 		GioiTinh = gioiTinh;
 	}
 	public String getEmail() {
-		return email;
+		return Email;
 	}
 	public void setEmail(String email) {
-		this.email = email;
+		Email = email;
 	}
-	
-	
+       
+       
+       
 }

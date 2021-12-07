@@ -1,19 +1,30 @@
 package mypack;
 
-public class TACGIA {
-	public String MaTG;
-	public String TenTG;
-	public boolean gioiTinh;
-	public String diaChi;
-	public String SDT;
-	public TACGIA(String maTG, String tenTG, boolean gioiTinh, String diaChi, String sDT) {
-		super();
-		MaTG = maTG;
-		TenTG = tenTG;
-		this.gioiTinh = gioiTinh;
-		this.diaChi = diaChi;
-		SDT = sDT;
-	}
+public class TacGia {
+
+    public String MaTG;
+    public String TenTG; 
+    public boolean gioiTinh;
+    public String diaChi;
+    public String SDT;
+    
+    
+    public TacGia(String MaTG, String TenTG, boolean gioiTinh, String diaChi, String SDT)
+    {
+        this.MaTG = MaTG;
+        this.TenTG = TenTG;
+        this.gioiTinh = gioiTinh;
+        this.diaChi = diaChi;
+        this.SDT = SDT;
+    }
+    public TacGia(TacGia tacgia)
+    {
+        this.MaTG = tacgia.MaTG;
+        this.TenTG = tacgia.TenTG;
+        this.gioiTinh = tacgia.gioiTinh;
+        this.diaChi = tacgia.diaChi;
+        this.SDT = tacgia.SDT;
+    }
 	public String getMaTG() {
 		return MaTG;
 	}
@@ -44,6 +55,5 @@ public class TACGIA {
 	public void setSDT(String sDT) {
 		SDT = sDT;
 	}
-	
-	
+    
 }

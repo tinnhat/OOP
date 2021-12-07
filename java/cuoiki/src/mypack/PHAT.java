@@ -1,27 +1,37 @@
 package mypack;
 
-public class PHAT {
-	public SACH MSSach;
-	public DOCGIA MSDG;
-	public String LyDoPhat;
-	public double TienNop;
-	public PHAT(SACH mSSach, DOCGIA mSDG, String lyDoPhat, double tienNop) {
-		super();
-		MSSach = mSSach;
-		MSDG = mSDG;
-		LyDoPhat = lyDoPhat;
-		TienNop = tienNop;
-	}
-	public SACH getMSSach() {
+public class Phat {
+
+	  public Sach MSSach;
+      public DocGia MSDG;
+      public String LyDoPhat;
+      public double TienNop;
+      
+      public Phat(Sach MSSach, DocGia MSDG, String LyDoPhat, double TienNop)
+      {
+          this.MSSach = MSSach;
+          this.MSDG = MSDG;
+          this.LyDoPhat = LyDoPhat;
+          this.TienNop = TienNop;
+      }
+      public Phat(Phat phat)
+      {
+          MSSach = phat.MSSach;
+          MSDG = phat.MSDG;
+          LyDoPhat = phat.LyDoPhat;
+          TienNop = phat.TienNop;
+      }
+      
+	public Sach getMSSach() {
 		return MSSach;
 	}
-	public void setMSSach(SACH mSSach) {
+	public void setMSSach(Sach mSSach) {
 		MSSach = mSSach;
 	}
-	public DOCGIA getMSDG() {
+	public DocGia getMSDG() {
 		return MSDG;
 	}
-	public void setMSDG(DOCGIA mSDG) {
+	public void setMSDG(DocGia mSDG) {
 		MSDG = mSDG;
 	}
 	public String getLyDoPhat() {
@@ -36,5 +46,7 @@ public class PHAT {
 	public void setTienNop(double tienNop) {
 		TienNop = tienNop;
 	}
-	
+      
+      
+      
 }

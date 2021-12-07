@@ -1,18 +1,27 @@
 package mypack;
 
 public class NXB {
-	public String MaNXB;
-	public String tenNXB;
-	public String DiaChiNXB;
-	public String ThongTinKhac;
-	public NXB(String maNXB, String tenNXB, String diaChiNXB, String thongTinKhac) {
-		super();
-		MaNXB = maNXB;
-		this.tenNXB = tenNXB;
-		DiaChiNXB = diaChiNXB;
-		ThongTinKhac = thongTinKhac;
-	}
-	
+
+    public String MaNXB;
+    public String tenNXB; 
+    public String DiaChiNXB;
+    public String ThongTinKhac;
+    
+    public NXB(String MaNXB,String tenNXB,String DiaChiNXB,String ThongTinKhac)
+    {
+        this.MaNXB = MaNXB;
+        this.tenNXB = tenNXB;
+        this.DiaChiNXB = DiaChiNXB;
+        this.ThongTinKhac = ThongTinKhac;
+    }
+    public NXB(NXB nxb)
+    {
+        this.MaNXB = nxb.MaNXB;
+        this.tenNXB = nxb.tenNXB;
+        this.DiaChiNXB = nxb.DiaChiNXB;
+        this.ThongTinKhac = nxb.ThongTinKhac;
+    }
+    
 	public String getMaNXB() {
 		return MaNXB;
 	}
@@ -37,5 +46,6 @@ public class NXB {
 	public void setThongTinKhac(String thongTinKhac) {
 		ThongTinKhac = thongTinKhac;
 	}
-	
+    
+    
 }

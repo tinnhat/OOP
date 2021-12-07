@@ -1,14 +1,22 @@
 package mypack;
 
-public class LOAISACH {
-	public String MaLoaiSach;
-	public String TheLoai;
-	public LOAISACH(String maLoaiSach, String theLoai) {
-		super();
-		MaLoaiSach = maLoaiSach;
-		TheLoai = theLoai;
-	}
-	
+public class LoaiSach {
+
+    public String MaLoaiSach;
+    public String TheLoai;
+    
+    public LoaiSach(String MaLoaiSach,String TheLoai)
+    {
+        this.MaLoaiSach = MaLoaiSach;
+        this.TheLoai = TheLoai;
+    }
+    public LoaiSach(LoaiSach Loai)
+    {
+        this.MaLoaiSach = Loai.MaLoaiSach;
+        this.TheLoai = Loai.TheLoai;
+    }
+    
+    
 	public String getMaLoaiSach() {
 		return MaLoaiSach;
 	}
@@ -21,6 +29,6 @@ public class LOAISACH {
 	public void setTheLoai(String theLoai) {
 		TheLoai = theLoai;
 	}
-	
-	
+    
+    
 }
