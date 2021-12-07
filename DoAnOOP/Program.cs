@@ -32,6 +32,8 @@ namespace DoAnOOP
             loaiSach.Add(new LoaiSach("TC01", "tu chon"));
             loaiSach.Add(new LoaiSach("GT01", "giao trinh"));
             loaiSach.Add(new LoaiSach("TK01", "tham khao"));
+            loaiSach.Add(new LoaiSach("TK02", "Tham khao"));
+            loaiSach.Add(new LoaiSach("TK03", "Book"));
         }
         public static void TaoNhaXuatBan()
         {
@@ -89,6 +91,8 @@ namespace DoAnOOP
             phat.Add(new Phat(sach[3], docGia[0], "nop tre", 20000.0));
             phat.Add(new Phat(sach[4],docGia[1], "rach bia", 50000.0));
             phat.Add(new Phat(sach[7], docGia[2], "mat sach", 80000.0));
+            phat.Add(new Phat(sach[5], docGia[1], "mat sach", 70000.0));
+            phat.Add(new Phat(sach[3], docGia[1], "mat sach", 70000.0));
         }
         public static void TaoChiTietPhieuMuon()
         {
@@ -309,10 +313,169 @@ namespace DoAnOOP
                           {
                               inhoa = A.MSSach.TenSach.ToUpper()
                           };
-            Console.WriteLine("\n\t\t====== \t20/ LIỆT KÊ IN HOA TÊN SÁCH CỦA NHỮNG QUYỂN SÁCH ĐÃ MƯỢN VÀ ĐƯỢC TRẢ  ========= ");
             foreach (var v in results)
             {
                 Console.WriteLine(v.inhoa);
+            }
+        }
+
+        public static void cau21()
+        {
+            var sachFirstChars =
+                from s in sach
+                select s.TenSach[0];
+            var loaiSachFirstChars =
+                from ls in loaiSach
+                select ls.TheLoai[0];
+            var uniqueFirstChars = sachFirstChars.Union(loaiSachFirstChars);
+            foreach (var v in uniqueFirstChars)
+            {
+                Console.WriteLine(v);
+            }
+        }
+
+        public static void cau22()
+        {
+            var sachFirstChars =
+                from s in sach
+                select s.TenSach[0];
+            var loaiSachFirstChars =
+                from ls in loaiSach
+                select ls.TheLoai[0];
+            var uniqueFirstChars = sachFirstChars.Except(loaiSachFirstChars);
+            foreach (var v in uniqueFirstChars)
+            {
+                Console.WriteLine(v);
+            }
+        }
+
+        public static void cau23()
+        {
+            var sachPhatLonHon60000 =
+                from p in phat
+                where p.TienNop > 60000
+                select p;
+            foreach (var v in sachPhatLonHon60000)
+            {
+                Console.WriteLine("{0} la ma sach va {1} la doc gia co tien phat lon hon 60000.", v.MSSach.MSSACH, v.MSDG.MSDG);
+                Console.WriteLine(v);
+            }
+        }
+
+        public static void cau24()
+        {
+            var sachPhatCoLyDoMatSach =
+                from p in phat
+                where p.LyDoPhat == "mat sach"
+                select p;
+            foreach (var v in sachPhatCoLyDoMatSach)
+            {
+                Console.WriteLine("Cuon sach ma {0} .", v.MSSach.MSSACH);
+                foreach (var d in v.MSDG.MSDG)
+                {
+                    Console.WriteLine(d);
+                }
+            }
+        }
+
+        public static void cau25()
+        {
+            var sachGroups =
+                from p in sach
+                group p by p.loaiSach into g
+                where g.All(p => p.SoLuong > 0)
+                select new { loaiSach = g.Key, sach = g };
+            foreach (var v in sachGroups)
+            {
+                Console.WriteLine("Cuon sach ma {0} .", v.loaiSach.MaLoaiSach);
+                foreach (var d in v.sach)
+                {
+                    Console.WriteLine(d.TenSach);
+                }
+            }
+        }
+
+        public static void cau26()
+        {
+            var book10 =
+
+                from c in sach
+
+                where c.SoLuong == 10
+
+                select new { c.MSSACH };
+
+
+
+            var allButFirst2Book = book10.Skip(2);
+
+
+
+            Console.WriteLine("Tat ca cac cuon sach tru 2 cuon dau tien co nam xuat ban 2006:");
+
+            foreach (var a in allButFirst2Book)
+
+            {
+                Console.WriteLine(a.MSSACH);
+            }
+        }
+
+        public static void cau27()
+        {
+            var bookNames =
+                from c in sach
+                select c.TenSach;
+            var staffNames =
+                from p in nhanVien
+                select p.HoTenNV;
+
+            var allNames = bookNames.Concat(staffNames);
+
+            Console.WriteLine("Customer and product names:");
+            foreach (var n in allNames)
+            {
+                Console.WriteLine(n);
+            }
+        }
+        
+        public static void cau28()
+        {
+            var sortedSach =
+                from p in sach
+                orderby p.TenSach, p.SoLuong descending
+                select p;
+
+            Console.WriteLine("Customer and product names:");
+            foreach (var n in sortedSach)
+            {
+                Console.WriteLine("{0}, {1}", n.TenSach, n.SoLuong);
+            }
+        }
+
+        public static void cau29()
+        {
+            var categoryNames = (
+                from p in sach
+                select p.loaiSach.MaLoaiSach)
+                .Distinct();
+
+            Console.WriteLine("Category names:");
+            foreach (var n in categoryNames)
+            {
+                Console.WriteLine(n);
+            }
+        }
+
+        public static void cau30()
+        {
+            var nhanvienOrderd =
+                from c in nhanVien
+                where c.NgaySinh == new DateTime(2007, 9, 6)
+                select new { c.HoTenNV, c.SDT, c.GioiTinh };
+
+            foreach (var n in nhanvienOrderd)
+            {
+                Console.WriteLine(n);
             }
         }
 
@@ -431,16 +594,16 @@ namespace DoAnOOP
             //LÊ ĐĂNG KHOA (CÂU 11 - 20)
             //11. Liệt kê sách theo loại sách
             Console.WriteLine("\t\t==============LE DANG KHOA CAU 11 -> 20===================");
-            cau11();
-            cau12();
-            cau13();
-            cau14();
-            cau15();
-            cau16();
-            cau17();
-            cau18();
-            cau19();
-            cau20();
+            //cau11();
+            //cau12();
+            //cau13();
+            //cau14();
+            //cau15();
+            //cau16();
+            //cau17();
+            //cau18();
+            //cau19();
+            cau30();
             Console.ReadLine();
         }
         //fdfs

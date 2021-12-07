@@ -19,3 +19,10 @@ D:\BH C#\Class OOP\Project cuoi ky github\OOP\DoAnOOP\obj\Debug\DoAnOOP.csproj.A
 D:\BH C#\Class OOP\Project cuoi ky github\OOP\DoAnOOP\obj\Debug\DoAnOOP.csproj.CoreCompileInputs.cache
 D:\BH C#\Class OOP\Project cuoi ky github\OOP\DoAnOOP\obj\Debug\DoAnOOP.exe
 D:\BH C#\Class OOP\Project cuoi ky github\OOP\DoAnOOP\obj\Debug\DoAnOOP.pdb
+D:\1stCourse2021-2022\oop\FinalProject\OOP\DoAnOOP\bin\Debug\DoAnOOP.exe.config
+D:\1stCourse2021-2022\oop\FinalProject\OOP\DoAnOOP\bin\Debug\DoAnOOP.exe
+D:\1stCourse2021-2022\oop\FinalProject\OOP\DoAnOOP\bin\Debug\DoAnOOP.pdb
+D:\1stCourse2021-2022\oop\FinalProject\OOP\DoAnOOP\obj\Debug\DoAnOOP.csprojAssemblyReference.cache
+D:\1stCourse2021-2022\oop\FinalProject\OOP\DoAnOOP\obj\Debug\DoAnOOP.csproj.CoreCompileInputs.cache
+D:\1stCourse2021-2022\oop\FinalProject\OOP\DoAnOOP\obj\Debug\DoAnOOP.exe
+D:\1stCourse2021-2022\oop\FinalProject\OOP\DoAnOOP\obj\Debug\DoAnOOP.pdb

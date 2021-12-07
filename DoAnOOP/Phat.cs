@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DoAnOOP
 {
-    class Phat
+    public class Phat
     {
         public Sach MSSach { get; set; }
         public DocGia MSDG { get; set; }

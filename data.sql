@@ -4,6 +4,8 @@ INSERT INTO dbo.LOAISACH(MaLoaiSach,LoaiSach)VALUES('NC01','nang cao')
 INSERT INTO dbo.LOAISACH(MaLoaiSach,LoaiSach)VALUES('TC01','tu chon')
 INSERT INTO dbo.LOAISACH(MaLoaiSach,LoaiSach)VALUES('GT01','giao trinh')
 INSERT INTO dbo.LOAISACH(MaLoaiSach,LoaiSach)VALUES('TK01','tham khao')
+INSERT INTO dbo.LOAISACH(MaLoaiSach,LoaiSach)VALUES('TK02','Tham khao')
+INSERT INTO dbo.LOAISACH(MaLoaiSach,LoaiSach)VALUES('TK03','An toan thong tin')
 
 
 --nha xuat ban
